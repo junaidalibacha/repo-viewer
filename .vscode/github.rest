@@ -1,0 +1,37 @@
+
+@baseUrl = https://api.github.com
+@token = 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
+@aceptHeader = application/vnd.github.html+json
+
+GET {{baseUrl}}/user/starred
+    ?page=1
+Authorization: bearer {{token}}
+Accept: {{aceptHeader}}
+
+###
+GET {{baseUrl}}/search/repositories
+    ?q=flutter
+    &page=1
+Authorization: bearer {{token}}
+Accept: {{aceptHeader}}
+
+###
+GET {{baseUrl}}/repos/flutter/flutter/readme
+Authorization: bearer {{token}}
+Accept: {{aceptHeader}}
+
+###
+PUT {{baseUrl}}/user/starred/junaidalibacha/astra-dashboard
+Authorization: bearer {{token}}
+Content-Length: 0
+Accept: {{aceptHeader}}
+
+###
+DELETE {{baseUrl}}/user/starred/junaidalibacha/astra-dashboard
+Authorization: bearer {{token}}
+Accept: {{aceptHeader}}
+
+###
+GET {{baseUrl}}/user/starred/junaidalibacha/astra-dashboard
+Authorization: bearer {{token}}
+Accept: {{aceptHeader}}
